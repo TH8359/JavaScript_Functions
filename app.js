@@ -86,8 +86,11 @@ axisAndQuadrant(10, -10);
 function triangles(a, b, c) {
 
 let sumAB = a + b;
+let sumBC = b + c;
+let sumCA = c + a;
 
-if (sumAB <= c) {
+
+if (sumAB <= c && sumBC <= a && sumCA <= b) {
     console.log("These sides do not form a valid triangle");
 }
 else if (a == b && b == c) {
@@ -103,4 +106,4 @@ else {
 }
 
 // Test for triangles
-triangles(6, 4, 6);
+triangles(5, 10, 5);
