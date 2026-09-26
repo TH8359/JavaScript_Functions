@@ -9,9 +9,7 @@ function printOdds(count) {
         if (counter % 2 != 0) {
             console.log(counter);
         } 
-        else {
-
-        }
+        
     }
 
 }
@@ -90,7 +88,7 @@ let sumBC = b + c;
 let sumCA = c + a;
 
 
-if (sumAB <= c && sumBC <= a && sumCA <= b) {
+if (sumAB <= c || sumBC <= a || sumCA <= b) {
     console.log("These sides do not form a valid triangle");
 }
 else if (a == b && b == c) {
@@ -106,4 +104,9 @@ else {
 }
 
 // Test for triangles
-triangles(5, 10, 5);
+triangles(2, 4, 6); //Invalid Test 1
+triangles(10, 5, 5); //Invalid Test 2
+triangles (1, 5, 3); //Invalid Test 3
+triangles(5, 5, 5); //Equilateral Test
+triangles(15, 11, 20); //Scalene Test
+triangles (15, 15, 20); //Isosceles Test
